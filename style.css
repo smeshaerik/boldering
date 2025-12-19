@@ -1,24 +1,35 @@
-body {
-    font-family: sans-serif;
+/* Базовый сброс стилей и определение шрифта */
+* {
     margin: 0;
     padding: 0;
-    color: #333;
-    background-color: #f4f4f4;
+    box-sizing: border-box;
 }
 
-header {
-    background-color: #fff;
-    padding: 10px 0;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+body {
+    font-family: Arial, sans-serif; /* Используйте шрифт, похожий на Open Sans */
+    background-color: #f0f0f0; /* Светло-серый фон страницы */
+    color: #333;
+    line-height: 1.6;
+}
+
+.content-container {
+    max-width: 700px; /* Ограничивает ширину центрального блока, как на картинке */
+    margin: 20px auto; /* Центрирует блок на странице */
+    background-color: #fff; /* Белый фон контента */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Стили навигации */
+.main-header {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
 }
 
 .main-nav ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+    display: flex; /* Использует flexbox для горизонтального расположения ссылок */
+    justify-content: space-around; /* Равномерно распределяет ссылки по ширине */
 }
 
 .main-nav a {
@@ -28,49 +39,51 @@ header {
     padding: 5px 10px;
 }
 
-.hero-section {
-    text-align: center;
-    padding: 40px 20px;
-    background-color: #fff;
-    margin-top: 20px;
-}
-
+/* Заголовок страницы */
 h1 {
-    margin-bottom: 20px;
+    text-align: center;
+    margin: 40px 0;
+    font-size: 2em;
 }
 
+/* Галерея изображений */
 .image-gallery {
     display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap; 
+    justify-content: space-between;
+    gap: 10px; /* Расстояние между картинками */
+    margin-bottom: 30px;
 }
 
-.gallery-item img {
-    width: 100%;
-    max-width: 250px;
+.image-gallery img {
+    width: 32%; /* Делает картинки примерно одинаковыми по ширине */
     height: auto;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    border: 1px solid #ddd;
+    padding: 5px;
 }
 
-.content-section {
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 800px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+/* Описание и контакты */
+.description-block p {
+    margin-bottom: 20px;
+    padding: 0 10px;
+    /* justify-content: space-between; - это свойство для flexbox, не для p */
 }
 
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 15px 0;
-    margin-top: 40px;
+.description-block a {
+    color: #000; /* Цвет ссылки, как на макете */
+    text-decoration: underline;
 }
 
-.contact-info p {
-    margin: 5px 0;
+.contact-info {
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column; /* Элементы расположены вертикально */
+    gap: 15px;
+    padding: 20px 10px;
+}
+
+.contact-item strong {
+    display: block; /* Заставляет заголовки занимать всю ширину */
+    border-bottom: 1px solid #000; /* Тонкая черная линия под заголовком */
+    padding-bottom: 5px;
 }
